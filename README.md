@@ -1,6 +1,7 @@
 # 2020-pd2-DoodleJump
 ![image](Page.png)
 ## Video link
+https://www.youtube.com/watch?v=pZKusF0pYMw&feature=youtu.be
 ## How to play
 按鍵A和D控制玩家移動  
 按下空格鍵能射出子彈  
