@@ -26,15 +26,44 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    player.cpp \
+    bullet.cpp \
+    platformmoving.cpp \
+    platform_basic.cpp \
+    platformbroken.cpp \
+    platform_prop_springbed.cpp \
+    platform_prop_spring.cpp \
+    monster.cpp \
+    hazard.cpp \
+    shield.cpp \
+    lose_interface.cpp \
+    coin.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    player.h \
+    bullet.h \
+    platform.h \
+    platformmoving.h \
+    platform_basic.h \
+    platformbroken.h \
+    platform_prop_springbed.h \
+    platform_prop_spring.h \
+    monster.h \
+    hazard.h \
+    shield.h \
+    lose_interface.h \
+    coin.h
 
-FORMS += \
-        mainwindow.ui
+FORMS +=
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES +=
+
+RESOURCES += \
+    resource.qrc

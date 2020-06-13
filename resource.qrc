@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/player.png</file>
+        <file>image/bullet.png</file>
+        <file>image/background.png</file>
+        <file>image/platform.png</file>
+        <file>image/platformmoving.png</file>
+        <file>image/plat_moving.png</file>
+        <file>image/platform_broken.png</file>
+        <file>image/platform_prop1.png</file>
+        <file>image/platform_prop2.png</file>
+        <file>image/monster.png</file>
+        <file>image/Hazard.png</file>
+        <file>image/shield.png</file>
+        <file>image/coin_real.png</file>
+    </qresource>
+</RCC>
