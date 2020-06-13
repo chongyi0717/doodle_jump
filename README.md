@@ -16,7 +16,8 @@
 (11)遊戲進行是左上角會有數字顯示當前分數
 (12)遊戲結束時會顯示“GAME OVER”字樣，同時顯示出當前遊戲的分數  
 ## Polymorphism
-(13)以下的class繼承了PlatForm這個abstract class:  
+(13)在MainWindow中創建PlatForm指標的vector來存取所有子類型，同時對所有物件進行操作  
+以下的class繼承了PlatForm這個abstract class:  
 >(a)PlatForm_Basic  
 (b)PlatFormBroken  
 (c)PlatFormMoving  
@@ -25,7 +26,7 @@
 (f)Coin  
 (g)Hazard  
 (h)Monster  
-在MainWindow中創建PlatForm指標的vector來存取所有子類型，同時對所有物件進行操作
+
 ## Bonus
 (14)遊戲結束後能在結束界面顯示目前最高分  
 (15)遊戲中能撿取金幣，數量會顯示在右上角，遊戲結束後會顯示撿拾的金幣總額
