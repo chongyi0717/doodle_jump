@@ -1,4 +1,5 @@
 # 2020-pd2-DoodleJump
+![image](Page.png)
 ## Video link
 ## How to play
 按鍵A和D控制玩家移動
