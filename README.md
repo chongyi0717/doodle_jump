@@ -17,7 +17,7 @@
 (12)遊戲結束時會顯示“GAME OVER”字樣，同時顯示出當前遊戲的分數  
 ## Polymorphism
 (13)以下的class繼承了PlatForm這個abstract class:  
-(a)PlatForm_Basic  
+    (a)PlatForm_Basic  
 (b)PlatFormBroken  
 (c)PlatFormMoving  
 (d)PlatForm_Prop_Spring  
