@@ -48,6 +48,7 @@ private:
     bool get_shield;
     qreal y_player;
     int get_coin;
+    bool alive;
 };
 
 #endif // PLAYER_H

@@ -22,7 +22,7 @@ qreal player::a=500;
 int player::score=0;
 qreal player::y_final=0;
 using namespace std;
-player::player(int width,int height):update_platform(0),get_shield(false),y_player(600),get_coin(0)
+player::player(int width,int height):update_platform(0),get_shield(false),y_player(600),get_coin(0),alive(true)
 {
     QPixmap pix;
     pix.load(":/image/player.png");
@@ -47,7 +47,7 @@ player::player(int width,int height):update_platform(0),get_shield(false),y_play
 
 void player::keyPressEvent(QKeyEvent *event)
 {
-
+    if(alive){
     if(event->key()==Qt::Key_A)
     {
         if(timer->isActive())
@@ -67,6 +67,7 @@ void player::keyPressEvent(QKeyEvent *event)
     }
     else if(event->key()==Qt::Key_Escape)
     {
+
         count++;
         if(count%2==1)
         {
@@ -80,7 +81,9 @@ void player::keyPressEvent(QKeyEvent *event)
             timer->start();
             MainWindow::timer->start();
         }
+
     }
+
     if(int(x())>=scene_width-40)
     {
         setPos(0-40,y());
@@ -88,6 +91,7 @@ void player::keyPressEvent(QKeyEvent *event)
     else if(int(x())<=0-40)
     {
         setPos(scene_width-40,y());
+    }
     }
 }
 
@@ -202,6 +206,7 @@ void player::jump()
                 timer_left->stop();
                 timer_right->stop();
                 MainWindow::timer->stop();
+                alive=false;
             }
             else if(get_shield){
                 colliding_items[i]->setPos(rand()%scene_width,rand()%scene_height-5*scene_height);
@@ -284,6 +289,7 @@ void player::jump()
     }
     if(y()>scene_height)
     {
+        alive=false;
         Lose_Interface *interface=new Lose_Interface(score,get_coin);
         scene()->removeItem(this);
         delete this;
