@@ -112,7 +112,7 @@ void MainWindow::generate_platform()
         scene->addItem(prop2);
         plat.push_back(prop2);
 
-        PlatForm *monster=new Monster(rand()%scene_width,rand()%scene_height);
+        PlatForm *monster=new Monster(rand()%scene_width,rand()%scene_height-5*scene_height);
         scene->addItem(monster);
         plat.push_back(monster);
 
