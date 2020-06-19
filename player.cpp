@@ -161,7 +161,7 @@ void player::jump()
             if(x()+50>colliding_items[i]->x()&& (x() + 20 < colliding_items[i]->x() + 68) &&
                     (y() + 70 > colliding_items[i]->y())&& (y() + 70 < colliding_items[i]->y() + 14)&&dy>0)
             {
-                dy=-9;
+                dy=-12;
 
             }
         }
@@ -226,6 +226,7 @@ void player::jump()
     for(int i=0;i<MainWindow::plat.size();i++)
     {
         MainWindow::plat.at(i)->setY(dy<=0?MainWindow::plat.at(i)->y()-dy:(MainWindow::plat.at(i)->y()));
+        //MainWindow::plat.at(i)->setY(MainWindow::plat.at(i)->y()-dy);
         if(MainWindow::plat.at(i)->y()>scene_height)
         {
            if(typeid(*(MainWindow::plat.at(i)))==typeid(PlatFormBroken) ||
